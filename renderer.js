@@ -1,6 +1,11 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// No Node.js APIs are available in this process because
-// `nodeIntegration` is turned off. Use `preload.js` to
-// selectively enable features needed in the rendering
-// process.
+function component() {
+  const element = document.createElement("div");
+
+  window.data = "amit";
+  element.innerHTML = "Hello";
+
+  return element;
+}
+
+
+document.body.appendChild(component());
